@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import '../models/trip_model.dart';
 import '../models/triplists.dart';
 
 class TripDetailesScreen extends StatefulWidget {
@@ -18,7 +19,7 @@ class _TripDetailesScreenState extends State<TripDetailesScreen> {
    
   TripModelList tripModelList = TripModelList();
   
-   
+   List<TripModel> favourittrips=[];
   @override
   Widget build(BuildContext context) {
     TripModelList tripModelList=TripModelList();
@@ -71,6 +72,12 @@ class _TripDetailesScreenState extends State<TripDetailesScreen> {
          SizedBox(height: 100,)  
          
          ]),
+        
+      ),
+      floatingActionButton: FloatingActionButton(onPressed: () {
+     
+      },
+      child: Icon(Icons.star),
       ),
     );
   }

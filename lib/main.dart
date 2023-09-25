@@ -4,6 +4,9 @@ import 'package:sebhs/screens/categories_screen.dart';
 import 'package:sebhs/screens/category_trips_screen.dart';
 import 'package:sebhs/sebha.dart';
 
+import 'ọthers/filters_screen.dart';
+import 'ọthers/tabs_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -38,8 +41,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute:"home" ,
       routes: {
+        TabsScreen.routeName:(context)=> TabsScreen(),
         AllCategoriesScreen.routeName:(context)=> AllCategoriesScreen(),
         CategoryTripsScreen.routeName:(context)=> CategoryTripsScreen(),
+        FilterScreen.routeName:(context)=> FilterScreen(),
       },
     );
   }

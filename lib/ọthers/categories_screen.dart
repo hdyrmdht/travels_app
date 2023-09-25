@@ -9,18 +9,13 @@ import 'package:sebhs/models/card_model.dart';
 import '../models/triplists.dart';
 
 class AllCategoriesScreen extends StatelessWidget {
-  static const String routeName = "home";
+  static const String routeName = "secondhome";
 
   @override
   Widget build(BuildContext context) {
     CardModel cardModel = CardModel();
     TripModelList tripModelList = TripModelList();
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("دليل سياحي"),
-        centerTitle: true,
-      ),
-      body: Padding(
+    return  Padding(
         padding: const EdgeInsets.only(top: 8.0, right: 5, left: 5),
         child: GridView.builder(
           // ignore: prefer_const_constructors
@@ -78,9 +73,10 @@ class AllCategoriesScreen extends StatelessWidget {
               ),
             );
           },
-        ),
-      ),
+        )
     );
+      
+    
   }
 }
 //  Image.asset(cardModel.imgeback[index]),
